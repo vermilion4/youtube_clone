@@ -121,5 +121,13 @@ export const movies = [
     viewCount: '869k views',
     moment: '3 weeks ago',
     verified: Verified
+  }, {
+    id: 12,
+    image: Movie3,
+    thumbnail: Thumbnail3,
+    title: 'My NYSC experience in Kebbi',
+    author: 'Paulina',
+    viewCount: '200 views',
+    moment: '6 months ago'
   },
 ];
