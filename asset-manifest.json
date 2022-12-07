@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8b3b868c.css",
-    "main.js": "/static/js/main.465ce79b.js",
+    "main.js": "/static/js/main.3b655df5.js",
     "static/media/movie2.jpeg": "/static/media/movie2.5cdf625e550bb4dd4f5e.jpeg",
     "static/media/movie3.webp": "/static/media/movie3.513912ca3f3549ee869d.webp",
     "static/media/movie4.webp": "/static/media/movie4.4bd641749d07d2852af3.webp",
@@ -23,10 +23,10 @@
     "static/media/hamburger-icon.svg": "/static/media/hamburger-icon.908d6b51bb3cef366d69bf5eee9852ab.svg",
     "static/media/home.svg": "/static/media/home.2961b0580bbad90436f2b938e068474c.svg",
     "main.8b3b868c.css.map": "/static/css/main.8b3b868c.css.map",
-    "main.465ce79b.js.map": "/static/js/main.465ce79b.js.map"
+    "main.3b655df5.js.map": "/static/js/main.3b655df5.js.map"
   },
   "entrypoints": [
     "static/css/main.8b3b868c.css",
-    "static/js/main.465ce79b.js"
+    "static/js/main.3b655df5.js"
   ]
 }
