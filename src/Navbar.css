@@ -1,0 +1,202 @@
+img {
+  width: 100%;
+  height: 100%;
+}
+nav {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  padding: 0 1.5rem;
+  background-color: #0f0f0f;
+  height: 60px;
+  z-index: 10;
+}
+.left-nav,
+.right-nav {
+  flex-basis: 22%;
+}
+.left-nav {
+  justify-content: flex-start;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.menu,
+.logo {
+  position: relative;
+}
+.menu {
+  aspect-ratio: 1/1;
+  height: 40px;
+  border-radius: 100%;
+  padding: 0.4rem;
+}
+.menu:hover {
+  background-color: #1f1f1f;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.center-nav {
+  flex-basis: 56%;
+  justify-content: center;
+  display: flex;
+  gap: 0.4rem;
+}
+.right-nav {
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.logo {
+  width: 100px;
+  margin-bottom: -3px;
+}
+.country {
+  position: absolute;
+  color: #aaa;
+  font-size: x-small;
+  top: -3px;
+  right: -18px;
+}
+
+/* Search */
+.search {
+  display: flex;
+  align-items: center;
+  background-color: #0f0f0f;
+  width: 90%;
+  height: 40px;
+  border-radius: 40px 40px 40px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.093);
+}
+.search input[type='text'] {
+  width: 88%;
+  position: relative;
+  background-color: #0f0f0f;
+  border: 1px solid #121212;
+  border-right: none;
+  border-radius: 2px 0 0 2px;
+  box-shadow: inset 0 1px 2px #0f0f0f;
+  color: #fff;
+  padding: 2px 6px;
+  margin-left: 20px;
+  font-size: 17px;
+}
+
+.search-btn {
+  width: 12%;
+  height: 40px;
+  border: none;
+  border-radius: 0 40px 40px 0;
+  background-color: rgba(255, 255, 255, 0.093);
+  cursor: pointer;
+}
+.mic {
+  aspect-ratio: 1/1;
+  height: 40px;
+  background-color: #181818;
+  border-radius: 100%;
+}
+.mic:hover {
+  background-color: #1f1f1f;
+  cursor: pointer;
+}
+
+/* Right nav */
+.create,
+.notification,
+.profile,
+.search-mobile,
+.mic-mobile {
+  aspect-ratio: 1/1;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.missed {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  font-size: x-small;
+  background-color: #cc0000;
+  border-radius: 40px;
+  padding: 0.1rem 0.3rem;
+}
+.profile img {
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+}
+.profile:hover {
+  cursor: pointer;
+}
+.create:hover,
+.notification:hover,
+.search-mobile:hover,
+.mic-mobile:hover {
+  background-color: #1f1f1f;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+/* Tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  height: fit-content;
+  background-color: #514e4e;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: small;
+  padding: 0.6rem 0.5rem;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: -50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+@media (max-width: 1000px) {
+  .search {
+    width: 70%;
+  }
+}
+@media (max-width: 700px) {
+  .search {
+    width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  nav {
+    padding: 0 0.5rem;
+  }
+  .search,
+  .mic {
+    display: none;
+  }
+  .right-nav {
+    gap: 0.2rem;
+  }
+  .logo {
+    width: 80px;
+  }
+}

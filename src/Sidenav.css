@@ -1,0 +1,135 @@
+.sidenav {
+  position: fixed;
+  padding-top: 0.5rem;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100%;
+  background-color: #0f0f0f;
+  color: #fff;
+  overflow-y: scroll;
+}
+
+.sidenav-header {
+  display: none;
+}
+
+.sidenav-icon {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 25px;
+  cursor: pointer;
+  user-select: none;
+}
+.sidenav-items {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8px;
+}
+.sidenav-items hr {
+  border-bottom: none;
+  margin: 1rem 0;
+  margin-right: 1rem;
+  border-color: rgba(255, 255, 255, 0.093);
+}
+.sidenav-items .item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 10px 1.3rem;
+  margin-left: 0.3rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.sidenav-items .item.active {
+  background-color: rgba(255, 255, 255, 0.093);
+}
+.sidenav-items .item:hover {
+  background-color: rgba(255, 255, 255, 0.242);
+}
+.sidenav.collapsed {
+  width: 100px;
+}
+
+.sidenav.collapsed .sidenav-items {
+  gap: 0.7rem;
+}
+.sidenav.collapsed .sidenav-icon {
+  margin-right: 0;
+  margin-left: -10px;
+}
+.sidenav.collapsed .sidenav-text {
+  display: none;
+}
+.sidenav.collapsed .item.active {
+  background-color: transparent;
+  color: #fff;
+}
+.sidenav.collapsed .item.active:hover {
+  background-color: rgba(255, 255, 255, 0.242);
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.sidenav.collapsed .item {
+  gap: 0.5rem;
+  flex-direction: column;
+  padding: 10px 0;
+  margin: 0;
+}
+.sidenav.collapsed .item .icon-text {
+  font-size: x-small;
+  margin-left: -10px;
+}
+
+@media (max-width: 1300px) {
+  .sidenav {
+    top: 0px;
+    z-index: 11;
+  }
+  .sidenav.collapsed {
+    top: 60px;
+  }
+  .sidenav.collapsed .sidenav-header {
+    display: none;
+  }
+  .sidenav-header {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    padding: 8px 8px 30px 1.5rem;
+  }
+
+  .sidenav-header-icon {
+    aspect-ratio: 1/1;
+    height: 40px;
+    border-radius: 100%;
+    padding: 0.4rem;
+  }
+  .sidenav-header-icon:hover {
+    background-color: #1f1f1f;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+  .sidenav-logo {
+    width: 100px;
+  }
+}
+@media (max-width: 792px) {
+  .sidenav.collapsed {
+    top: 0px;
+    width: 0px;
+    z-index: 11;
+  }
+  .sidenav.collapsed .sidenav-header {
+    display: block;
+  }
+}
