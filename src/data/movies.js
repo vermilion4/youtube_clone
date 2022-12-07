@@ -130,4 +130,13 @@ export const movies = [
     viewCount: '200 views',
     moment: '6 months ago'
   },
+  {
+    id: 13,
+    image: Movie2,
+    thumbnail: Thumbnail2,
+    title: 'Beyond the seas',
+    author: 'Chained Pacer',
+    viewCount: '88k views',
+    moment: '1 year ago'
+  },
 ];
