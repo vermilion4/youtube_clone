@@ -200,3 +200,42 @@ nav {
     width: 80px;
   }
 }
+@media (max-width: 400px) {
+  .create,
+  .notification,
+  .profile,
+  .search-mobile,
+  .mic-mobile {
+    height: 30px;
+  }
+  .logo {
+    width: 60px;
+  }
+  .profile img {
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+  }
+}
+@media (max-width: 300px) {
+  .create,
+  .notification,
+  .profile,
+  .search-mobile,
+  .mic-mobile {
+    height: 25px;
+  }
+  .logo {
+    width: 50px;
+  }
+  .profile img {
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+  }
+  .right-nav {
+    gap: 0.1rem;
+  }
+}
