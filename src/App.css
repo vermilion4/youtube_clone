@@ -95,6 +95,7 @@ main {
   background-color: #0f0f0f;
   border-radius: 15px;
   transition: all 0.2s ease-in-out;
+  height: auto;
 }
 /* .card:hover {
   transform: scale(1.2);
@@ -125,8 +126,8 @@ main {
   cursor: pointer;
 }
 .card-image {
-  height: auto;
   position: relative;
+  height: 70%;
 }
 .play-text {
   display: none;
@@ -153,6 +154,7 @@ main {
   margin-top: 1rem;
   align-items: flex-start;
   gap: 0.6rem;
+  height: 30%;
 }
 .information {
   display: flex;
@@ -197,6 +199,11 @@ main {
     grid-template-columns: repeat(5, 1fr);
   }
 }
+@media (min-width: 4000px) {
+  .gallery-cards {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
 @media (max-width: 1200px) {
   .gallery-cards {
     grid-template-columns: repeat(3, 1fr);
@@ -220,5 +227,8 @@ main {
 @media (max-width: 600px) {
   .gallery-cards {
     grid-template-columns: 1fr;
+  }
+  .information .title {
+    width: 100%;
   }
 }
