@@ -11,6 +11,7 @@ The finished product will be to build a clone of YouTube and make it functional 
 
 - Clicking on any movie image would lead to the video page for that particular movie
 - The Logo and Home menu on the sidebar lead back to the landing page
+- User can subscribe and unsubscribe on the single video page
 
 [Live Link](https://vermilion4.github.io/youtube_clone)
 

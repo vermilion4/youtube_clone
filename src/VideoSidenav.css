@@ -1,8 +1,8 @@
-.sidenav.collapsed {
+.videosidenav.collapsed {
   width: 0;
   margin-left: -1000px;
 }
-.sidenav {
+.videosidenav {
   position: fixed;
   padding-top: 0.5rem;
   margin-left: 0;
@@ -19,47 +19,47 @@
   z-index: 11;
 }
 
-.sidenav-header {
+.videosidenav .sidenav-header {
   display: flex;
   align-items: center;
   gap: 1.3rem;
   padding: 8px 8px 30px 1.5rem;
 }
 
-.sidenav-header-icon {
+.videosidenav .sidenav-header-icon {
   aspect-ratio: 1/1;
   height: 40px;
   border-radius: 100%;
   padding: 0.4rem;
 }
-.sidenav-header-icon:hover {
+.videosidenav .sidenav-header-icon:hover {
   background-color: #1f1f1f;
   border-radius: 100%;
   cursor: pointer;
 }
 
-.sidenav-icon {
+.videosidenav .sidenav-icon {
   width: 1.5em;
   height: 1.5em;
   margin-right: 25px;
   cursor: pointer;
   user-select: none;
 }
-.sidenav-logo {
+.videosidenav .sidenav-logo {
   width: 100px;
 }
-.sidenav-items {
+.videosidenav .sidenav-items {
   display: flex;
   flex-direction: column;
   padding: 0 8px;
 }
-.sidenav-items hr {
+.videosidenav .sidenav-items hr {
   border-bottom: none;
   margin: 1rem 0;
   margin-right: 1rem;
   border-color: rgba(255, 255, 255, 0.093);
 }
-.sidenav-items .item {
+.videosidenav .sidenav-items .item {
   display: flex;
   align-items: center;
   padding: 10px 0 10px 1.3rem;
@@ -70,9 +70,9 @@
   cursor: pointer;
 }
 
-.sidenav-items .item.active {
+.videosidenav .sidenav-items .item.active {
   background-color: rgba(255, 255, 255, 0.093);
 }
-.sidenav-items .item:hover {
+.videosidenav .sidenav-items .item:hover {
   background-color: rgba(255, 255, 255, 0.242);
 }

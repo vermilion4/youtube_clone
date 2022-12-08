@@ -36,7 +36,12 @@ const Video = () => {
   } = currentVideo;
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [width, setWidth] = useState(window.innerWidth);
-  const [isSubscribed, setIsSubscribed] = useState(subscribed);
+  let userSubscribe = subscribed;
+  const [isSubscribed, setIsSubscribed] = useState(userSubscribe);
+  const handleSubscribe = () => {
+    userSubscribe = isSubscribed;
+    setIsSubscribed(!userSubscribe);
+  };
   // For sidebar
   const handleToggler = () => {
     setIsCollapsed(!isCollapsed);
@@ -112,7 +117,9 @@ const Video = () => {
                     <p>{subscribers}</p>
                   </div>
                 </div>
-                <div className={`${isSubscribed ? 'subscribed' : 'subscribe'}`}>
+                <div
+                  onClick={handleSubscribe}
+                  className={`${isSubscribed ? 'subscribed' : 'subscribe'}`}>
                   {isSubscribed ? (
                     <div className='bell'>
                       <img src={Bell} alt='bell icon' />

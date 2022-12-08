@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 
 const VideoSidenav = ({ isCollapsed, handleToggler }) => {
   return (
-    <div className={isCollapsed ? 'sidenav collapsed' : 'sidenav'}>
+    <div className={isCollapsed ? 'videosidenav collapsed' : 'videosidenav'}>
       <div className='sidenav-header'>
         <div onClick={handleToggler} className='sidenav-header-icon'>
           <img src={hamburger} alt='hamburger icon' />
