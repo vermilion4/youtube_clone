@@ -258,6 +258,7 @@ const Video = () => {
               {movies.map((movie) => {
                 return (
                   <Link
+                    key={movie.id}
                     to={`/watch/${movie.id}`}
                     className='recommended-videos'>
                     <div className='video-img'>
