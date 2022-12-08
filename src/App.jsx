@@ -4,6 +4,8 @@ import { tags } from './data/tags';
 import Navbar from './Navbar';
 import Sidenav from './Sidenav';
 import { movies } from './data/movies';
+import Options from './assets/options.svg';
+import { Link } from 'react-router-dom';
 
 const App = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -32,6 +34,8 @@ const App = () => {
       window.removeEventListener('resize', handleWindowResize);
     };
   }, []);
+
+  const maxCharHome = 40;
 
   return (
     <div>
@@ -68,10 +72,22 @@ const App = () => {
           <div className='gallery-body'>
             <div className='gallery-cards'>
               {movies.map((movie) => {
+                if (movie.title.length > maxCharHome) {
+                  movie.title = movie.title.substring(0, maxCharHome);
+                  movie.title =
+                    movie.title.substring(
+                      0,
+                      Math.min(movie.title.length, movie.title.lastIndexOf(' '))
+                    ) + '...';
+                }
                 return (
-                  <div key={movie.id} className='card'>
+                  <Link
+                    to={`/watch/${movie.id}`}
+                    key={movie.id}
+                    className='card'>
                     <div className='card-image'>
                       <img src={`${movie.image}`} alt='Movie poster' />
+                      <div className='play-text'>Keep hovering to play</div>
                     </div>
                     <div className='card-details'>
                       <div className='thumbnail'>
@@ -80,6 +96,9 @@ const App = () => {
                       <div className='information'>
                         <div className='top'>
                           <h4 className='title'>{movie.title}</h4>
+                          <div className='option'>
+                            <img src={Options} alt='options icon' />
+                          </div>
                         </div>
                         <div className='bottom'>
                           <div className='author'>
@@ -96,7 +115,7 @@ const App = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 );
               })}
             </div>

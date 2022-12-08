@@ -7,6 +7,7 @@ import notification from './assets/notification-icon.svg';
 import profile from './assets/profile-icon.jpg';
 import search from './assets/search-icon.svg';
 import youtube from './assets/youtube-icon.svg';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ handleToggler, width }) => {
   return (
@@ -15,10 +16,10 @@ const Navbar = ({ handleToggler, width }) => {
         <div className='menu' onClick={handleToggler}>
           <img src={hamburger} alt='hamburger icon' className='icon' />
         </div>
-        <div className='logo'>
+        <Link to={'/youtube_clone'} className='logo'>
           <img src={youtube} alt='youtube icon' className='yt-icon' />
           <span className='country'>NG</span>
-        </div>
+        </Link>
       </div>
       <div className='center-nav'>
         <div className='search'>

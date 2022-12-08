@@ -10,10 +10,10 @@ import ShowMore from './assets/show-more.svg';
 import hamburger from './assets/hamburger-icon.svg';
 import youtube from './assets/youtube-icon.svg';
 
-import './Sidenav.css';
+import './VideoSidenav.css';
 import { Link } from 'react-router-dom';
 
-const Sidenav = ({ width, isCollapsed, handleToggler }) => {
+const VideoSidenav = ({ isCollapsed, handleToggler }) => {
   return (
     <div className={isCollapsed ? 'sidenav collapsed' : 'sidenav'}>
       <div className='sidenav-header'>
@@ -92,4 +92,4 @@ const Sidenav = ({ width, isCollapsed, handleToggler }) => {
   );
 };
 
-export default Sidenav;
+export default VideoSidenav;

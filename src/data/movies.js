@@ -12,11 +12,13 @@ export const movies = [
     id: 0,
     image: Movie1,
     thumbnail: Thumbnail1,
-    title: 'Wednesday: Things released in NYC',
+    title: 'Wednesday: Thing released in the streets of New York City',
     author: 'Netflix',
     viewCount: '1.3M views',
     moment: '1 day ago',
-    verified: Verified
+    verified: Verified,
+    subscribers: '1.2M subscribers',
+    subscribed: true
   },
   {
     id: 1,
@@ -25,36 +27,44 @@ export const movies = [
     title: 'Beyond the seas',
     author: 'Chained Pacer',
     viewCount: '88k views',
-    moment: '1 year ago'
+    moment: '1 year ago',
+    subscribers: '250k subscribers',
+    subscribed: true
   },
   {
     id: 2,
     image: Movie3,
     thumbnail: Thumbnail3,
     title: 'My NYSC experience in Kebbi',
-    author: 'Paulina',
+    author: 'Paulina Mclair',
     viewCount: '200 views',
-    moment: '6 months ago'
+    moment: '6 months ago',
+    subscribers: '480k subscribers',
+    subscribed: false
   },
   {
     id: 3,
     image: Movie4,
     thumbnail: Thumbnail4,
-    title: 'Iya Tao reloaded',
+    title: 'Iya Tao reloaded: Teni in trouble after slapping Brother Tayo',
     author: 'Taooma',
     viewCount: '869k views',
     moment: '3 weeks ago',
-    verified: Verified
+    verified: Verified,
+    subscribers: '480k subscribers',
+    subscribed: true
   },
   {
     id: 4,
     image: Movie1,
     thumbnail: Thumbnail1,
-    title: 'Wednesday: Things released in NYC',
+    title: 'Wednesday: Thing released in the streets of New York City',
     author: 'Netflix',
     viewCount: '1.3M views',
     moment: '1 day ago',
-    verified: Verified
+    verified: Verified,
+    subscribers: '480k subscribers',
+    subscribed: false
   },
   {
     id: 5,
@@ -63,7 +73,9 @@ export const movies = [
     title: 'Beyond the seas',
     author: 'Chained Pacer',
     viewCount: '88k views',
-    moment: '1 year ago'
+    moment: '1 year ago',
+    subscribers: '480k subscribers',
+    subscribed: false
   },
   {
     id: 6,
@@ -72,7 +84,9 @@ export const movies = [
     title: 'My NYSC experience in Kebbi',
     author: 'Paulina',
     viewCount: '200 views',
-    moment: '6 months ago'
+    moment: '6 months ago',
+    subscribers: '480k subscribers',
+    subscribed: false
   },
   {
     id: 7,
@@ -82,17 +96,21 @@ export const movies = [
     author: 'Taooma',
     viewCount: '869k views',
     moment: '3 weeks ago',
-    verified: Verified
+    verified: Verified,
+    subscribers: '480k subscribers',
+    subscribed: false
   },
   {
     id: 8,
     image: Movie1,
     thumbnail: Thumbnail1,
-    title: 'Wednesday: Things released in NYC',
+    title: 'Wednesday: Thing released in the streets of New York City',
     author: 'Netflix',
     viewCount: '1.3M views',
     moment: '1 day ago',
-    verified: Verified
+    verified: Verified,
+    subscribers: '480k subscribers',
+    subscribed: false
   },
   {
     id: 9,
@@ -101,7 +119,9 @@ export const movies = [
     title: 'Beyond the seas',
     author: 'Chained Pacer',
     viewCount: '88k views',
-    moment: '1 year ago'
+    moment: '1 year ago',
+    subscribers: '480k subscribers',
+    subscribed: true
   },
   {
     id: 10,
@@ -110,7 +130,9 @@ export const movies = [
     title: 'My NYSC experience in Kebbi',
     author: 'Paulina',
     viewCount: '200 views',
-    moment: '6 months ago'
+    moment: '6 months ago',
+    subscribers: '480k subscribers',
+    subscribed: false
   },
   {
     id: 11,
@@ -120,7 +142,9 @@ export const movies = [
     author: 'Taooma',
     viewCount: '869k views',
     moment: '3 weeks ago',
-    verified: Verified
+    verified: Verified,
+    subscribers: '480k subscribers',
+    subscribed: false
   }, {
     id: 12,
     image: Movie3,
@@ -128,7 +152,9 @@ export const movies = [
     title: 'My NYSC experience in Kebbi',
     author: 'Paulina',
     viewCount: '200 views',
-    moment: '6 months ago'
+    moment: '6 months ago',
+    subscribers: '480k subscribers',
+    subscribed: false
   },
   {
     id: 13,
@@ -137,6 +163,8 @@ export const movies = [
     title: 'Beyond the seas',
     author: 'Chained Pacer',
     viewCount: '88k views',
-    moment: '1 year ago'
+    moment: '1 year ago',
+    subscribers: '480k subscribers',
+    subscribed: false
   },
 ];

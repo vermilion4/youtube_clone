@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;700&display=swap');
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+}
+a:any-link {
+  text-decoration: none;
+  color: #fff;
+}
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #0f0f0f;
   color: #fff;
   min-height: 100vh;
@@ -77,16 +85,59 @@ main {
 .gallery-cards {
   display: grid;
   margin-right: 2rem;
+  padding-top: 1rem;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   padding-bottom: 50px;
+  grid-row-gap: 4rem;
 }
 .card {
   background-color: #0f0f0f;
   border-radius: 15px;
+  transition: all 0.2s ease-in-out;
+}
+/* .card:hover {
+  transform: scale(1.2);
+  z-index: 11;
+  background-color: rgb(71, 69, 69);
+}
+.card:hover .card-details {
+  padding: 0.1rem 0.6rem 0.3rem 0.6rem;
+}
+.card:hover .card-details .title {
+  font-size: 14px;
+}
+.card:hover .card-details .bottom {
+  font-size: 12px;
+} */
+.card:hover {
+  cursor: pointer;
+}
+.card:hover .card-details .option,
+.comment-details:hover .option,
+.recommended-videos:hover .option {
+  display: block;
+  aspect-ratio: 1/1;
+  height: 40px;
+  margin-left: auto;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
 }
 .card-image {
-  height: 180px;
+  height: 200px;
+  position: relative;
+}
+.play-text {
+  display: none;
+}
+.card:hover .card-image .play-text {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #000;
+  padding: 0.1rem 0.3rem;
 }
 .card-image img {
   border-radius: 15px;
@@ -97,14 +148,23 @@ main {
   width: 40px;
 }
 .card-details {
+  position: relative;
   display: flex;
   margin-top: 1rem;
+  align-items: flex-start;
   gap: 0.6rem;
 }
 .information {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+}
+.information .top {
+  display: flex;
+  justify-content: space-between;
+}
+.information .title {
+  width: 85%;
 }
 .information .bottom {
   color: rgba(188, 186, 186, 0.923);
@@ -128,6 +188,10 @@ main {
   font-size: 30px;
   margin-top: -15px;
 }
+.option {
+  display: none;
+}
+
 @media (min-width: 2000px) {
   .gallery-cards {
     grid-template-columns: repeat(5, 1fr);
