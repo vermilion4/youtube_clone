@@ -34,27 +34,9 @@
 .comments {
   grid-area: comm;
 }
-.video-tags-container {
-  height: 40px;
-  position: relative;
-  align-items: center;
-  top: 0px;
-  width: 100%;
-  display: flex;
-  background-color: #0f0f0f;
-  gap: 0.8rem;
-  overflow: hidden;
-}
-.video-tag {
-  background-color: rgba(255, 255, 255, 0.093);
-  min-width: max-content;
-  color: #fff;
-  padding: 0.4rem 0.8rem;
-  border-radius: 10px;
-  font-size: 15px;
-}
 
 /* Video section */
+
 .video-title {
   padding-top: 1rem;
   font-size: 25px;
@@ -286,9 +268,42 @@
 }
 
 /* Recommended videos section */
+.video-tags-container {
+  height: 40px;
+  position: relative;
+  align-items: center;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  background-color: #0f0f0f;
+  gap: 0.8rem;
+  overflow: scroll;
+}
+.video-tags-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.video-tags-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.video-tag {
+  background-color: rgba(255, 255, 255, 0.093);
+  min-width: max-content;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  font-size: 15px;
+}
 .recommended-videos-container {
   display: flex;
   flex-direction: column;
+}
+.video-tag-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 .recommended-videos {
   margin-top: 1rem;

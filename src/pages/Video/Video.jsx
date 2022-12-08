@@ -16,6 +16,7 @@ import Sort from '../../assets/sortBy.svg';
 import Profile from '../../assets/profile-icon.jpg';
 import { comments } from '../../data/comments';
 import Options from '../../assets/options.svg';
+import Next from '../../assets/next.svg';
 
 const Video = () => {
   // Get video id from url
@@ -243,16 +244,23 @@ const Video = () => {
             </div>
           </div>
           <div className='recommendations'>
-            <div className='video-tags-container'>
-              {tags.map((item) => {
-                return (
-                  <div
-                    key={item.id}
-                    className={`video-tag ${item.id === 0 ? 'active' : ''}`}>
-                    <p>{item.tag}</p>
-                  </div>
-                );
-              })}
+            <div className='video-tag-section'>
+              <div className='video-tags-container'>
+                {tags.map((item) => {
+                  return (
+                    <div
+                      key={item.id}
+                      className={`video-tag ${item.id === 0 ? 'active' : ''}`}>
+                      <p>{item.tag}</p>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className='right'>
+                <div className='next'>
+                  <img src={Next} alt='next' />
+                </div>
+              </div>
             </div>
             <div className='recommended-videos-container'>
               {movies.map((movie) => {

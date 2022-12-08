@@ -6,6 +6,7 @@ import Sidenav from './Sidenav';
 import { movies } from './data/movies';
 import Options from './assets/options.svg';
 import { Link } from 'react-router-dom';
+import Next from './assets/next.svg';
 
 const App = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -58,16 +59,23 @@ const App = () => {
                 : { marginLeft: '265px' }
               : { marginLeft: '1.5rem' }
           }>
-          <div className='tags-container'>
-            {tags.map((item) => {
-              return (
-                <div
-                  key={item.id}
-                  className={`tag ${item.id === 0 ? 'active' : ''}`}>
-                  <p>{item.tag}</p>
-                </div>
-              );
-            })}
+          <div className='tag-section'>
+            <div className='tags-container'>
+              {tags.map((item) => {
+                return (
+                  <div
+                    key={item.id}
+                    className={`tag ${item.id === 0 ? 'active' : ''}`}>
+                    <p>{item.tag}</p>
+                  </div>
+                );
+              })}
+            </div>
+            <div className='right'>
+              <div className='next'>
+                <img src={Next} alt='next' />
+              </div>
+            </div>
           </div>
           <div className='gallery-body'>
             <div className='gallery-cards'>

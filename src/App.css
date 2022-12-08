@@ -53,17 +53,31 @@ main {
   top: 60px;
 }
 /* Tags */
-.tags-container {
+.tag-section {
+  display: flex;
+  width: 100%;
   height: 50px;
   position: fixed;
   align-items: center;
   top: 60px;
-  width: 100%;
-  display: flex;
   z-index: 10;
   background-color: #0f0f0f;
+  gap: 0.5rem;
+}
+.tags-container {
+  display: flex;
   gap: 0.8rem;
-  overflow: hidden;
+  overflow: scroll;
+  flex-basis: 85%;
+}
+.tags-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.tags-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 .tag {
   background-color: rgba(255, 255, 255, 0.093);
@@ -80,6 +94,14 @@ main {
 .tag:hover {
   background-color: rgba(255, 255, 255, 0.242);
   cursor: pointer;
+}
+.next {
+  height: 30px;
+  cursor: pointer;
+}
+.next:hover {
+  background-color: rgba(255, 255, 255, 0.242);
+  border-radius: 100%;
 }
 /* Movie cards */
 .gallery-cards {
@@ -194,6 +216,11 @@ main {
   display: none;
 }
 
+@media (min-width: 1380px) {
+  .right {
+    display: none;
+  }
+}
 @media (min-width: 2000px) {
   .gallery-cards {
     grid-template-columns: repeat(5, 1fr);
@@ -223,6 +250,9 @@ main {
   .gallery-cards {
     grid-template-columns: repeat(2, 1fr);
   }
+  /* .tags-container {
+    width: 80%;
+  } */
 }
 @media (max-width: 600px) {
   .gallery-cards {
