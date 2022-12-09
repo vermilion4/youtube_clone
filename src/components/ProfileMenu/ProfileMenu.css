@@ -1,15 +1,26 @@
 .menu-items.sidenav-items {
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 80px;
   background-color: rgb(39, 38, 38);
   padding: 0;
   border-radius: 10px;
   z-index: 20;
-  width: 280px;
+  width: 300px;
+  height: 97vh;
+  overflow: scroll;
+  border-radius: 10px;
+}
+.menu-items.sidenav-items::-webkit-scrollbar {
+  background-color: rgb(39, 38, 38);
+  border-radius: 10px;
+}
+.menu-items.sidenav-items hr {
+  margin: 0.5rem 0;
 }
 
 .menu-items.sidenav-items .item {
+  position: relative;
   padding: 10px 0 10px 1rem;
   margin-left: 0;
   margin-right: 0;
@@ -22,9 +33,17 @@
 }
 
 .menu-items-header {
-  padding: 20px 0 20px 1rem;
+  padding: 20px 0 10px 1rem;
   display: flex;
   gap: 0.7rem;
+  position: fixed;
+  width: 292px;
+  background-color: rgb(39, 38, 38);
+  z-index: 21;
+  border-radius: 10px;
+}
+.menu-items-body {
+  margin-top: 100px;
 }
 
 .menu-items-header .profile img {
@@ -39,11 +58,21 @@
 }
 .full-name,
 .username {
-  font-weight: 600;
   font-size: 15px;
 }
 
 .manage-account {
   color: #3ea6ff;
   font-size: 13.5px;
+}
+.menu-items.sidenav-items .right {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+}
+
+@media (min-width: 1380px) {
+  .menu-items.sidenav-items .right {
+    display: block;
+  }
 }

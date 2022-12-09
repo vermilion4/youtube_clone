@@ -30,9 +30,6 @@ const App = () => {
   useEffect(() => {
     function handleWindowResize() {
       setWidth(getWidth());
-      if (width <= 792) {
-        setIsCollapsed(false);
-      }
     }
 
     window.addEventListener('resize', handleWindowResize);

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Channel.css';
 import Navbar from '../Navbar/Navbar';
 import Sidenav from '../Sidenav/Sidenav';
+import Banner from '../../assets/banner.jpeg';
 
 const Channel = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -25,9 +26,6 @@ const Channel = () => {
   useEffect(() => {
     function handleWindowResize() {
       setWidth(getWidth());
-      if (width <= 792) {
-        setIsCollapsed(false);
-      }
     }
 
     window.addEventListener('resize', handleWindowResize);
@@ -48,12 +46,28 @@ const Channel = () => {
         width={width}
         handleToggler={handleToggler}
       />
-      <main>
+      <main className='channel-main'>
         <Sidenav
           width={width}
           handleToggler={handleToggler}
           isCollapsed={isCollapsed}
         />
+        <div
+          className='channel-container'
+          style={
+            width > 792
+              ? isCollapsed
+                ? { marginLeft: '110px' }
+                : { marginLeft: '265px' }
+              : { marginLeft: '0' }
+          }>
+          <div className='channel-banner'></div>
+          <div className='channel-body' style={{ height: '1000px' }}>
+            Scroll Up and Down this page to see the parallax scrolling effect.
+            This div is just here to enable scrolling. Tip: Try to remove the
+            background-attachment property to remove the scrolling effect.
+          </div>
+        </div>
       </main>
     </div>
   );

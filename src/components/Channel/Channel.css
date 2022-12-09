@@ -1,0 +1,30 @@
+.channel-main {
+  top: 0;
+}
+.channel-container {
+  min-height: 100vh;
+}
+.channel-banner {
+  background: url('../../assets/banner.jpeg') 50px 60px;
+  /* Set a specific height */
+  min-height: 280px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-size: 100% 200px;
+  background-repeat: no-repeat;
+}
+
+.channel-body {
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 792px) {
+  .channel-banner {
+    background: url('../../assets/banner.jpeg') 0 60px;
+    min-height: 200px;
+    background-attachment: fixed;
+    background-size: 100% 100px;
+    background-repeat: no-repeat;
+  }
+}

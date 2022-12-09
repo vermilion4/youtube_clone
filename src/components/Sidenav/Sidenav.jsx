@@ -11,7 +11,7 @@ import hamburger from '../../assets/hamburger-icon.svg';
 import youtube from '../../assets/youtube-icon.svg';
 
 import './Sidenav.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Sidenav = ({ width, isCollapsed, handleToggler }) => {
   return (
@@ -26,13 +26,13 @@ const Sidenav = ({ width, isCollapsed, handleToggler }) => {
       </div>
 
       <div className='sidenav-items'>
-        <Link to={'/youtube_clone'} className='item active'>
+        <NavLink to={'/youtube_clone'} className='item'>
           <div className='sidenav-icon'>
             <img src={Home} alt='Home icon' />
           </div>
           <p className={!isCollapsed ? 'hide' : 'show icon-text'}>Home</p>
           <div className='sidenav-text'>Home</div>
-        </Link>
+        </NavLink>
         <div className='item'>
           <div className='sidenav-icon'>
             <img src={Shorts} alt='Shorts icon' />

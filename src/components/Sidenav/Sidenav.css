@@ -129,7 +129,7 @@
     width: 0px;
     z-index: 11;
   }
-  .sidenav.collapsed .sidenav-header {
+  /* .sidenav.collapsed .sidenav-header {
     display: block;
-  }
+  } */
 }
