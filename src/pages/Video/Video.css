@@ -360,8 +360,8 @@
   .video-container {
     grid-template-areas:
       'vid vid vid vid'
-      'comm comm comm comm'
-      'rec rec rec rec';
+      'rec rec rec rec'
+      'comm comm comm comm';
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
   }

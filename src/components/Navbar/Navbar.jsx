@@ -1,12 +1,12 @@
 import React from 'react';
 import './Navbar.css';
-import create from './assets/create-icon.svg';
-import hamburger from './assets/hamburger-icon.svg';
-import mic from './assets/mic-icon.svg';
-import notification from './assets/notification-icon.svg';
-import profile from './assets/profile-icon.jpg';
-import search from './assets/search-icon.svg';
-import youtube from './assets/youtube-icon.svg';
+import create from '../../assets/create-icon.svg';
+import hamburger from '../../assets/hamburger-icon.svg';
+import mic from '../../assets/mic-icon.svg';
+import notification from '../../assets/notification-icon.svg';
+import profile from '../../assets/profile-icon.jpg';
+import search from '../../assets/search-icon.svg';
+import youtube from '../../assets/youtube-icon.svg';
 import { Link } from 'react-router-dom';
 
 const Navbar = ({ handleToggler, width }) => {

@@ -1,14 +1,14 @@
 import React from 'react';
-import Home from './assets/home.svg';
-import Shorts from './assets/shorts.svg';
-import Subscription from './assets/subscription.svg';
-import Library from './assets/library.svg';
-import History from './assets/history.svg';
-import Videos from './assets/videos.svg';
-import WatchLater from './assets/watch-later.svg';
-import ShowMore from './assets/show-more.svg';
-import hamburger from './assets/hamburger-icon.svg';
-import youtube from './assets/youtube-icon.svg';
+import Home from '../../assets/home.svg';
+import Shorts from '../../assets/shorts.svg';
+import Subscription from '../../assets/subscription.svg';
+import Library from '../../assets/library.svg';
+import History from '../../assets/history.svg';
+import Videos from '../../assets/videos.svg';
+import WatchLater from '../../assets/watch-later.svg';
+import ShowMore from '../../assets/show-more.svg';
+import hamburger from '../../assets/hamburger-icon.svg';
+import youtube from '../../assets/youtube-icon.svg';
 
 import './Sidenav.css';
 import { Link } from 'react-router-dom';

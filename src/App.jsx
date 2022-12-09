@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { tags } from './data/tags';
-import Navbar from './Navbar';
-import Sidenav from './Sidenav';
+import Navbar from './components/Navbar/Navbar';
+import Sidenav from './components/Sidenav/Sidenav';
 import { movies } from './data/movies';
 import Options from './assets/options.svg';
 import { Link } from 'react-router-dom';

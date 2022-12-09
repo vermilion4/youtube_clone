@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { movies } from '../../data/movies';
 import { tags } from '../../data/tags';
-import Navbar from '../../Navbar';
-import VideoSidenav from '../../VideoSidenav';
+import Navbar from '../../components/Navbar/Navbar';
+import VideoSidenav from '../../components/VideoSidenav/VideoSidenav';
 import './Video.css';
 import Bell from '../../assets/bell.svg';
 import ShowMore from '../../assets/show-more.svg';
@@ -186,7 +186,7 @@ const Video = () => {
           </div>
           <div className='comments'>
             <div className='comment-header'>
-              <div className='count'>7.089 Comments</div>
+              <div className='count'>7,089 Comments</div>
               <div className='sort-section'>
                 <div className='sort'>
                   <img src={Sort} alt='sort icon' />
