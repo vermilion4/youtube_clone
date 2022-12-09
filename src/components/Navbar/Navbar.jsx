@@ -8,8 +8,10 @@ import profile from '../../assets/profile-icon.jpg';
 import search from '../../assets/search-icon.svg';
 import youtube from '../../assets/youtube-icon.svg';
 import { Link } from 'react-router-dom';
+import ProfileMenu from '../ProfileMenu/ProfileMenu';
 
-const Navbar = ({ handleToggler, width }) => {
+const Navbar = ({ handleToggler, width, isMenuOpen, handleMenuToggler }) => {
+  const username = '@aaron123';
   return (
     <nav>
       <div className='left-nav'>
@@ -58,9 +60,10 @@ const Navbar = ({ handleToggler, width }) => {
           <div className='missed'>9+</div>
           <div className='tooltiptext'>Notifications</div>
         </div>
-        <div className='profile'>
+        <div onClick={handleMenuToggler} className='profile'>
           <img src={profile} />
         </div>
+        {isMenuOpen ? <ProfileMenu username={username} /> : null}
       </div>
     </nav>
   );

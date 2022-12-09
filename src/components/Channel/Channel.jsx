@@ -1,0 +1,62 @@
+import React, { useState, useEffect } from 'react';
+import './Channel.css';
+import Navbar from '../Navbar/Navbar';
+import Sidenav from '../Sidenav/Sidenav';
+
+const Channel = () => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // For sidebar
+  const handleToggler = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+  // For profile menu
+  const handleMenuToggler = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    setIsCollapsed(false);
+  }, []);
+  const getWidth = () => {
+    return window.innerWidth;
+  };
+  useEffect(() => {
+    function handleWindowResize() {
+      setWidth(getWidth());
+      if (width <= 792) {
+        setIsCollapsed(false);
+      }
+    }
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
+  return (
+    <div>
+      {/* Overlay for sidebar at medium to small screen */}
+      {width <= 792 && !isCollapsed ? <div className='overlay'></div> : null}
+      {/* Navbar */}
+      <Navbar
+        isMenuOpen={isMenuOpen}
+        handleMenuToggler={handleMenuToggler}
+        width={width}
+        handleToggler={handleToggler}
+      />
+      <main>
+        <Sidenav
+          width={width}
+          handleToggler={handleToggler}
+          isCollapsed={isCollapsed}
+        />
+      </main>
+    </div>
+  );
+};
+
+export default Channel;

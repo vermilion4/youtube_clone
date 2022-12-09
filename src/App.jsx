@@ -11,10 +11,16 @@ import Next from './assets/next.svg';
 const App = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   // For sidebar
   const handleToggler = () => {
     setIsCollapsed(!isCollapsed);
   };
+  // For profile menu
+  const handleMenuToggler = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   useEffect(() => {
     setIsCollapsed(false);
   }, []);
@@ -43,7 +49,12 @@ const App = () => {
       {/* Overlay for sidebar at medium to small screen */}
       {width <= 792 && !isCollapsed ? <div className='overlay'></div> : null}
       {/* Navbar */}
-      <Navbar width={width} handleToggler={handleToggler} />
+      <Navbar
+        isMenuOpen={isMenuOpen}
+        handleMenuToggler={handleMenuToggler}
+        width={width}
+        handleToggler={handleToggler}
+      />
       <main>
         <Sidenav
           width={width}

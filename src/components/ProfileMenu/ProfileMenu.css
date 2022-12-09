@@ -1,0 +1,49 @@
+.menu-items.sidenav-items {
+  position: absolute;
+  top: 20px;
+  right: 80px;
+  background-color: rgb(39, 38, 38);
+  padding: 0;
+  border-radius: 10px;
+  z-index: 20;
+  width: 280px;
+}
+
+.menu-items.sidenav-items .item {
+  padding: 10px 0 10px 1rem;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
+  font-size: 14px;
+}
+
+.menu-items.sidenav-items .sidenav-icon {
+  margin-right: 20px;
+}
+
+.menu-items-header {
+  padding: 20px 0 20px 1rem;
+  display: flex;
+  gap: 0.7rem;
+}
+
+.menu-items-header .profile img {
+  height: 40px;
+  width: 40px;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.full-name,
+.username {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.manage-account {
+  color: #3ea6ff;
+  font-size: 13.5px;
+}
