@@ -34,6 +34,7 @@ const Video = () => {
     verified,
     subscribers,
     subscribed,
+    description,
   } = currentVideo;
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [width, setWidth] = useState(window.innerWidth);
@@ -187,22 +188,7 @@ const Video = () => {
                     style={
                       isShown ? { height: 'fit-content' } : { height: '60px' }
                     }>
-                    These were extremely hard not to look away from! Hope you
-                    enjoyed though!
-                    <br /> If you did please LIKE the video and SUBSCRIBE for
-                    more weird/funny/slightly entertaining content!
-                    <br />
-                    <br />
-                    These were extremely hard not to look away from! Hope you
-                    enjoyed though!
-                    <br /> If you did please LIKE the video and SUBSCRIBE for
-                    more weird/funny/slightly entertaining content!
-                    <br />
-                    These were extremely hard not to look away from! Hope you
-                    enjoyed though!
-                    <br /> If you did please LIKE the video and SUBSCRIBE for
-                    more weird/funny/slightly entertaining content!
-                    <br />
+                    {description}
                     <span
                       onClick={handleDescriptionShowMore}
                       className='bold show-more'>
