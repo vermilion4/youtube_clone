@@ -39,6 +39,9 @@ const Video = () => {
   const [width, setWidth] = useState(window.innerWidth);
   let userSubscribe = subscribed;
   const [isSubscribed, setIsSubscribed] = useState(userSubscribe);
+  const [isShown, setIsShown] = useState(false);
+
+  // For subscribe button
   const handleSubscribe = () => {
     userSubscribe = isSubscribed;
     setIsSubscribed(!userSubscribe);
@@ -46,6 +49,10 @@ const Video = () => {
   // For sidebar
   const handleToggler = () => {
     setIsCollapsed(!isCollapsed);
+  };
+  // For video description show more
+  const handleDescriptionShowMore = () => {
+    setIsShown(!isShown);
   };
   useEffect(() => {
     setIsCollapsed(true);
@@ -137,25 +144,29 @@ const Video = () => {
               </div>
               <div className='right-section'>
                 <div className='like-section'>
-                  <div className='like'>
+                  <div className='tooltip like'>
                     <img src={Like} alt='like' />
                     <p>144k</p>
+                    <div className='tooltiptext'>i like this</div>
                   </div>
                   <div className='separator'></div>
-                  <div className='dislike'>
+                  <div className='tooltip dislike'>
                     <img src={Dislike} alt='dislike' />
+                    <div className='tooltiptext'>i dislike this</div>
                   </div>
                 </div>
                 <div className='share-section'>
-                  <div className='share'>
+                  <div className='tooltip share'>
                     <img src={Share} alt='share' />
                     <p>Share</p>
+                    <div className='tooltiptext'>Share</div>
                   </div>
                 </div>
                 <div className='clip-section'>
-                  <div className='clip'>
+                  <div className='tooltip clip'>
                     <img src={Clip} alt='clip' />
                     <p>Clip</p>
+                    <div className='tooltiptext'>Clip</div>
                   </div>
                 </div>
                 <div className='more-section'>
@@ -172,13 +183,31 @@ const Video = () => {
                   <p>{moment}</p>
                 </div>
                 <div className='description-text'>
-                  <p>
+                  <p
+                    style={
+                      isShown ? { height: 'fit-content' } : { height: '60px' }
+                    }>
                     These were extremely hard not to look away from! Hope you
                     enjoyed though!
                     <br /> If you did please LIKE the video and SUBSCRIBE for
                     more weird/funny/slightly entertaining content!
                     <br />
-                    <span className='bold show-more'>Show more</span>
+                    <br />
+                    These were extremely hard not to look away from! Hope you
+                    enjoyed though!
+                    <br /> If you did please LIKE the video and SUBSCRIBE for
+                    more weird/funny/slightly entertaining content!
+                    <br />
+                    These were extremely hard not to look away from! Hope you
+                    enjoyed though!
+                    <br /> If you did please LIKE the video and SUBSCRIBE for
+                    more weird/funny/slightly entertaining content!
+                    <br />
+                    <span
+                      onClick={handleDescriptionShowMore}
+                      className='bold show-more'>
+                      {isShown ? 'Show less' : 'Show more'}
+                    </span>
                   </p>
                 </div>
               </div>
