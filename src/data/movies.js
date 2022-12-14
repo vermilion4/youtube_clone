@@ -18,7 +18,26 @@ export const movies = [
     moment: '1 day ago',
     verified: Verified,
     subscribers: '1.2M subscribers',
-    subscribed: true
+    subscribed: true,
+    username: '@netflix',
+    videos: [{
+      image: Movie2,
+      title: 'How to add a movie',
+      viewCount: '4.1k views',
+      moment: '1 day ago'
+    },
+    {
+      image: Movie4,
+      title: 'Jump scare',
+      viewCount: '2.1k views',
+      moment: '2 weeks ago'
+    },
+    {
+      image: Movie3,
+      title: 'How to add a movie',
+      viewCount: '4.1k views',
+      moment: '1 month ago'
+    }]
   },
   {
     id: 1,
@@ -29,7 +48,8 @@ export const movies = [
     viewCount: '88k views',
     moment: '1 year ago',
     subscribers: '250k subscribers',
-    subscribed: true
+    subscribed: true,
+    username: '@chained'
   },
   {
     id: 2,
@@ -40,7 +60,8 @@ export const movies = [
     viewCount: '200 views',
     moment: '6 months ago',
     subscribers: '480k subscribers',
-    subscribed: false
+    subscribed: false,
+    username: '@stoner'
   },
   {
     id: 3,
@@ -52,7 +73,8 @@ export const movies = [
     moment: '3 weeks ago',
     verified: Verified,
     subscribers: '480k subscribers',
-    subscribed: true
+    subscribed: true,
+    username: '@IyaTao'
   },
   {
     id: 4,
@@ -64,7 +86,8 @@ export const movies = [
     moment: '1 day ago',
     verified: Verified,
     subscribers: '480k subscribers',
-    subscribed: false
+    subscribed: false,
+    username: '@netflix'
   },
   {
     id: 5,
@@ -75,7 +98,8 @@ export const movies = [
     viewCount: '88k views',
     moment: '1 year ago',
     subscribers: '480k subscribers',
-    subscribed: false
+    subscribed: false,
+    username: '@pacer'
   },
   {
     id: 6,
@@ -86,7 +110,8 @@ export const movies = [
     viewCount: '200 views',
     moment: '6 months ago',
     subscribers: '480k subscribers',
-    subscribed: false
+    subscribed: false,
+    username: '@wednesday'
   },
   {
     id: 7,
@@ -98,7 +123,8 @@ export const movies = [
     moment: '3 weeks ago',
     verified: Verified,
     subscribers: '480k subscribers',
-    subscribed: false
+    subscribed: false,
+    username: '@wondergirl'
   },
   {
     id: 8,
@@ -110,7 +136,8 @@ export const movies = [
     moment: '1 day ago',
     verified: Verified,
     subscribers: '480k subscribers',
-    subscribed: false
+    subscribed: false,
+    username: '@trialed'
   },
   {
     id: 9,
@@ -121,7 +148,8 @@ export const movies = [
     viewCount: '88k views',
     moment: '1 year ago',
     subscribers: '480k subscribers',
-    subscribed: true
+    subscribed: true,
+    username: "@2chained"
   },
   {
     id: 10,
@@ -132,7 +160,8 @@ export const movies = [
     viewCount: '200 views',
     moment: '6 months ago',
     subscribers: '480k subscribers',
-    subscribed: false
+    subscribed: false,
+    username: '@destinygirl'
   },
   {
     id: 11,
@@ -144,7 +173,8 @@ export const movies = [
     moment: '3 weeks ago',
     verified: Verified,
     subscribers: '480k subscribers',
-    subscribed: false
+    subscribed: false,
+    username: '@tao'
   }, {
     id: 12,
     image: Movie3,
@@ -154,7 +184,8 @@ export const movies = [
     viewCount: '200 views',
     moment: '6 months ago',
     subscribers: '480k subscribers',
-    subscribed: false
+    subscribed: false,
+    username: '@aaron123'
   },
   {
     id: 13,
@@ -165,6 +196,7 @@ export const movies = [
     viewCount: '88k views',
     moment: '1 year ago',
     subscribers: '480k subscribers',
-    subscribed: false
+    subscribed: false,
+    username: '@livid'
   },
 ];

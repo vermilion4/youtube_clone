@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, NavLink, useParams } from 'react-router-dom';
 import { movies } from '../../data/movies';
 import { tags } from '../../data/tags';
 import Navbar from '../../components/Navbar/Navbar';
@@ -34,11 +34,18 @@ const Video = () => {
     verified,
     subscribers,
     subscribed,
+    username,
   } = currentVideo;
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [width, setWidth] = useState(window.innerWidth);
   let userSubscribe = subscribed;
   const [isSubscribed, setIsSubscribed] = useState(userSubscribe);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // For profile menu
+  const handleMenuToggler = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   const handleSubscribe = () => {
     userSubscribe = isSubscribed;
     setIsSubscribed(!userSubscribe);
@@ -95,7 +102,12 @@ const Video = () => {
       {/* Overlay for sidebar at medium to small screen */}
       {!isCollapsed ? <div className='overlay'></div> : null}
       {/* Navbar */}
-      <Navbar width={width} handleToggler={handleToggler} />
+      <Navbar
+        isMenuOpen={isMenuOpen}
+        handleMenuToggler={handleMenuToggler}
+        width={width}
+        handleToggler={handleToggler}
+      />
       <main>
         <VideoSidenav handleToggler={handleToggler} isCollapsed={isCollapsed} />
         <div className='video-container'>
@@ -105,16 +117,16 @@ const Video = () => {
             <div className='author-details'>
               <div className='left-section'>
                 <div className='sub-1'>
-                  <div className='thumbnail'>
+                  <NavLink to={`/${username}/featured`} className='thumbnail'>
                     <img src={thumbnail} alt='thumbnail' />
-                  </div>
+                  </NavLink>
                   <div className='data'>
-                    <div className='author'>
+                    <NavLink to={`/${username}/featured`} className='author'>
                       {author}
                       {verified ? (
                         <img className='verified' src={verified} />
                       ) : null}
-                    </div>
+                    </NavLink>
                     <p>{subscribers}</p>
                   </div>
                 </div>
