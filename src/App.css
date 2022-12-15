@@ -112,15 +112,16 @@ main {
   margin-right: 2rem;
   padding-top: 1rem;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+
   padding-bottom: 50px;
-  grid-row-gap: 4rem;
 }
 .card {
   background-color: #0f0f0f;
   border-radius: 15px;
   transition: all 0.2s ease-in-out;
   height: auto;
+  margin-right: 1rem;
+  margin-bottom: 4rem;
 }
 /* .card:hover {
   transform: scale(1.2);
