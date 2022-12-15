@@ -4,6 +4,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+.center {
+  text-align: center;
+}
 a {
   text-decoration: none;
 }

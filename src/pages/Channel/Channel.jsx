@@ -10,8 +10,21 @@ import Next from '../../assets/next.svg';
 import Home from './Home';
 import Videos from './Videos';
 import Shorts from './Shorts';
+import Playlists from './Playlists';
+import Community from './Community';
+import Channels from './Channels';
+import About from './About';
+import Search from '../../assets/search-icon.svg';
 
-const Channel = ({ home, videos, shorts }) => {
+const Channel = ({
+  home,
+  videos,
+  shorts,
+  channels,
+  playlists,
+  about,
+  community,
+}) => {
   // Get username from url
   let { username } = useParams();
   const ref = useRef(null);
@@ -22,6 +35,7 @@ const Channel = ({ home, videos, shorts }) => {
 
   const currentUser = movies.find((movie) => movie.username === username);
   let {
+    id,
     image,
     thumbnail,
     author,
@@ -31,6 +45,7 @@ const Channel = ({ home, videos, shorts }) => {
     verified,
     subscribers,
     subscribed,
+    description,
   } = currentUser;
 
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -108,8 +123,10 @@ const Channel = ({ home, videos, shorts }) => {
                 </div>
                 <div className='data'>
                   <div className='author'>{author}</div>
-                  <p>{username}</p>
-                  <p>{subscribers}</p>
+                  <span>
+                    <p>{username}</p>
+                    <p>{subscribers}</p>
+                  </span>
                 </div>
               </div>
               <div className='sub-2'>
@@ -143,20 +160,25 @@ const Channel = ({ home, videos, shorts }) => {
               <NavLink to={`/${username}/shorts`} className='menu-item'>
                 <h4>SHORTS</h4>
               </NavLink>
-              <NavLink to={'/'} className='menu-item'>
+              <NavLink to={`/${username}/playlists`} className='menu-item'>
                 <h4>PLAYLISTS</h4>
               </NavLink>
-              <NavLink to={'/'} ref={ref} className='menu-item'>
+              <NavLink
+                to={`/${username}/community`}
+                ref={ref}
+                className='menu-item'>
                 <h4>COMMUNITY</h4>
               </NavLink>
-              <NavLink to={'/'} className='menu-item'>
+              <NavLink to={`/${username}/channels`} className='menu-item'>
                 <h4>CHANNELS</h4>
               </NavLink>
-              <NavLink to={'/'} className='menu-item'>
+              <NavLink to={`/${username}/about`} className='menu-item'>
                 <h4>ABOUT</h4>
               </NavLink>
               <NavLink to={'/'} className='menu-item'>
-                <h4>SEARCH</h4>
+                <div className='search-icon'>
+                  <img src={Search} alt='' />
+                </div>
               </NavLink>
             </div>
             <div className='right'>
@@ -172,10 +194,17 @@ const Channel = ({ home, videos, shorts }) => {
                 viewCount={viewCount}
                 moment={moment}
                 image={image}
+                description={description}
+                id={id}
+                username={username}
               />
             )}
             {videos && <Videos />}
             {shorts && <Shorts />}
+            {playlists && <Playlists />}
+            {community && <Community />}
+            {channels && <Channels />}
+            {about && <About />}
           </div>
         </div>
       </main>

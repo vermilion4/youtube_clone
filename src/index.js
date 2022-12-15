@@ -17,6 +17,10 @@ root.render(
       <Route path="/:username/featured" element={ <Channel home /> }></Route>
       <Route path="/:username/videos" element={ <Channel videos /> }></Route>
       <Route path="/:username/shorts" element={ <Channel shorts /> }></Route>
+      <Route path="/:username/playlists" element={ <Channel playlists /> }></Route>
+      <Route path="/:username/community" element={ <Channel community /> }></Route>
+      <Route path="/:username/channels" element={ <Channel channels /> }></Route>
+      <Route path="/:username/about" element={ <Channel about /> }></Route>
     </Routes>
   </Router>
 );

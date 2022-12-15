@@ -5,15 +5,19 @@ The finished product will be to build a clone of YouTube and make it functional 
 ## Pages
 
 - The Single Channel Page
-- The Profile Menu leading to single channel page
-  ![](src\assets\profilemenu.png)
+- The different sections of the single channel page menu
 
 ## How to access
 
-- Clicking on the profile image on the navbar would open a menu
-- Your channel leads to the single channel page
+- Clicking on the author or thumbnail of a video on the video page leads to the single channel page
+
+  ![](src\assets\singlechannellead.png)
 
 [Live Link](https://vermilion4.github.io/youtube_clone)
+
+## Preview
+
+![](src\assets\singlechannel.png)
 
 ## How to run locally
 
