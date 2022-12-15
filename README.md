@@ -11,13 +11,14 @@ The finished product will be to build a clone of YouTube and make it functional 
 
 - Clicking on the author or thumbnail of a video on the video page leads to the single channel page
 
-  ![](src\assets\singlechannellead.png)
+ ![Screenshot (802)](https://user-images.githubusercontent.com/49479307/207883516-e54d56fb-b287-4ed2-996a-3a5eae61b6d2.png)
+
 
 [Live Link](https://vermilion4.github.io/youtube_clone)
 
 ## Preview
 
-![](src\assets\singlechannel.png)
+![Screenshot (803)](https://user-images.githubusercontent.com/49479307/207883493-6a2d98c4-d19c-4012-9ef6-baeb0b4e08ce.png)
 
 ## How to run locally
 
