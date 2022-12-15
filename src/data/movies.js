@@ -37,7 +37,18 @@ export const movies = [
       title: 'How to add a movie',
       viewCount: '4.1k views',
       moment: '1 month ago'
-    }]
+    }],
+    description: `Take a look at how Wednesday brought to life our beloved limb. 
+
+    ➡️SUBSCRIBE FOR MORE: http://bit.ly/29kBByr
+    
+    About Netflix:
+    Netflix is the world's leading streaming entertainment service with 223 million paid memberships in over 190 countries enjoying TV series, documentaries, feature films and mobile games across a wide variety of genres and languages. Members can play, pause and resume watching as much as they want, anytime, anywhere, and can change their plans at any time.
+    
+    Thing: Behind The Scenes | Wednesday | Netflix
+    https://www.youtube.com/@stillwatchin...
+    
+    Smart, sarcastic and a little dead inside, Wednesday Addams investigates a murder spree while making new friends — and foes — at Nevermore Academy.`
   },
   {
     id: 1,
@@ -49,7 +60,14 @@ export const movies = [
     moment: '1 year ago',
     subscribers: '250k subscribers',
     subscribed: true,
-    username: '@chained'
+    username: '@chained',
+    description: `These were extremely hard not to look away from! Hope you
+    enjoyed though!
+    
+    If you did please LIKE the video and SUBSCRIBE for
+    more weird/funny/slightly entertaining content!
+
+    `
   },
   {
     id: 2,
@@ -61,7 +79,21 @@ export const movies = [
     moment: '6 months ago',
     subscribers: '480k subscribers',
     subscribed: false,
-    username: '@stoner'
+    username: '@stoner',
+    description: `song: Bad Guy
+    artist: Billie Eilish
+    show: Wednesday
+    
+    I didn't really like the show except from the character Wednesday because in my opinion it was a bit childish and maybe it was just meant for little kids but that's just my opinion...
+    
+    let me know what you thought about the show :))
+    
+    I had to include the dance scene because Jenna Ortega KILLED IT
+    
+    
+    
+    
+    #wednesday #wednesdayaddams #badguy #billieeilish #jennaortega`
   },
   {
     id: 3,
@@ -74,7 +106,12 @@ export const movies = [
     verified: Verified,
     subscribers: '480k subscribers',
     subscribed: true,
-    username: '@IyaTao'
+    username: '@IyaTao',
+    description: `The worldwide phenomenon comes to life in Fifty Shades of Grey, starring Dakota Johnson and Jamie Dornan in the iconic roles of Anastasia Steele and Christian Grey. Ana is an inexperienced college student tasked with interviewing enigmatic billionaire Christian Grey. But what starts as business quickly becomes an unconventional romance. Swept up in Christian's glamorous lifestyle, Ana soon finds another side to him as she discovers his secrets and explores her own dark desires. What results is a thrilling, all-consuming romance as Christian and Ana test the limits they will go to for their relationship.
+
+    Own it now on 4K Ultra HD, Blu-ray, DVD & Digital: https://www.uphe.com/movies/fifty-sha...
+    
+    Sign-up to receive updates, sneak peeks and offers here: http://uni.pictures/emailyt `
   },
   {
     id: 4,
@@ -87,7 +124,15 @@ export const movies = [
     verified: Verified,
     subscribers: '480k subscribers',
     subscribed: false,
-    username: '@netflix'
+    username: '@netflix',
+    description: `These were extremely hard not to look away from! Hope you
+    enjoyed though!
+    
+    If you did please LIKE the video and SUBSCRIBE for
+    more weird/funny/slightly entertaining content!
+
+    `
+
   },
   {
     id: 5,
@@ -99,7 +144,14 @@ export const movies = [
     moment: '1 year ago',
     subscribers: '480k subscribers',
     subscribed: false,
-    username: '@pacer'
+    username: '@pacer',
+    description: `These were extremely hard not to look away from! Hope you
+    enjoyed though!
+    
+    If you did please LIKE the video and SUBSCRIBE for
+    more weird/funny/slightly entertaining content!
+
+    `
   },
   {
     id: 6,
@@ -111,7 +163,14 @@ export const movies = [
     moment: '6 months ago',
     subscribers: '480k subscribers',
     subscribed: false,
-    username: '@wednesday'
+    username: '@wednesday',
+    description: `These were extremely hard not to look away from! Hope you
+    enjoyed though!
+    
+    If you did please LIKE the video and SUBSCRIBE for
+    more weird/funny/slightly entertaining content!
+
+    `
   },
   {
     id: 7,
@@ -124,7 +183,14 @@ export const movies = [
     verified: Verified,
     subscribers: '480k subscribers',
     subscribed: false,
-    username: '@wondergirl'
+    username: '@wondergirl',
+    description: `These were extremely hard not to look away from! Hope you
+    enjoyed though!
+    
+    If you did please LIKE the video and SUBSCRIBE for
+    more weird/funny/slightly entertaining content!
+
+    `
   },
   {
     id: 8,
@@ -137,7 +203,14 @@ export const movies = [
     verified: Verified,
     subscribers: '480k subscribers',
     subscribed: false,
-    username: '@trialed'
+    username: '@trialed',
+    description: `These were extremely hard not to look away from! Hope you
+    enjoyed though!
+    
+    If you did please LIKE the video and SUBSCRIBE for
+    more weird/funny/slightly entertaining content!
+
+    `
   },
   {
     id: 9,
@@ -149,7 +222,14 @@ export const movies = [
     moment: '1 year ago',
     subscribers: '480k subscribers',
     subscribed: true,
-    username: "@2chained"
+    username: "@2chained",
+    description: `These were extremely hard not to look away from! Hope you
+    enjoyed though!
+    
+    If you did please LIKE the video and SUBSCRIBE for
+    more weird/funny/slightly entertaining content!
+
+    `
   },
   {
     id: 10,
@@ -161,7 +241,14 @@ export const movies = [
     moment: '6 months ago',
     subscribers: '480k subscribers',
     subscribed: false,
-    username: '@destinygirl'
+    username: '@destinygirl',
+    description: `These were extremely hard not to look away from! Hope you
+    enjoyed though!
+    
+    If you did please LIKE the video and SUBSCRIBE for
+    more weird/funny/slightly entertaining content!
+
+    `
   },
   {
     id: 11,
@@ -174,7 +261,14 @@ export const movies = [
     verified: Verified,
     subscribers: '480k subscribers',
     subscribed: false,
-    username: '@tao'
+    username: '@tao',
+    description: `These were extremely hard not to look away from! Hope you
+    enjoyed though!
+    
+    If you did please LIKE the video and SUBSCRIBE for
+    more weird/funny/slightly entertaining content!
+
+    `
   }, {
     id: 12,
     image: Movie3,
@@ -185,7 +279,14 @@ export const movies = [
     moment: '6 months ago',
     subscribers: '480k subscribers',
     subscribed: false,
-    username: '@aaron123'
+    username: '@aaron123',
+    description: `These were extremely hard not to look away from! Hope you
+    enjoyed though!
+    
+    If you did please LIKE the video and SUBSCRIBE for
+    more weird/funny/slightly entertaining content!
+
+    `
   },
   {
     id: 13,
@@ -197,6 +298,13 @@ export const movies = [
     moment: '1 year ago',
     subscribers: '480k subscribers',
     subscribed: false,
-    username: '@livid'
+    username: '@livid',
+    description: `These were extremely hard not to look away from! Hope you
+    enjoyed though!
+    
+    If you did please LIKE the video and SUBSCRIBE for
+    more weird/funny/slightly entertaining content!
+
+    `
   },
 ];

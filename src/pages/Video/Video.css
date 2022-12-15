@@ -162,20 +162,32 @@
 }
 .description {
   margin-top: 0.7rem;
-  background-color: rgba(255, 255, 255, 0.093);
+  background-color: rgb(41, 40, 40);
   padding: 0.8rem;
   border-radius: 10px;
+}
+.description-text {
+  position: relative;
+  z-index: 1;
 }
 .description-text p {
   font-size: 15px;
   font-weight: 400;
   line-height: 20px;
+  overflow: hidden;
+  padding-bottom: 2rem;
 }
 .bold {
   font-weight: 700;
 }
 .show-more {
   cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgb(41, 40, 40);
+  width: 100%;
 }
 
 /* Comment section */
