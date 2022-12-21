@@ -1,28 +1,27 @@
-# Youtube Clone Day 2
+# Youtube Clone Refactoring
 
-The finished product will be to build a clone of YouTube and make it functional using Google Apis.
+Code refactoring is one of the main key terms in software development nowadays. By definition, it is the process of editing and simplifying the software code, without changing its behaviour. Today’s task is to see how well you can refactor a codebase
 
 ## Pages
 
 - The Single Channel Page
 - The different sections of the single channel page menu
-
-## How to access
-
-- Clicking on the author or thumbnail of a video on the video page leads to the single channel page
-
- ![Screenshot (802)](https://user-images.githubusercontent.com/49479307/207883516-e54d56fb-b287-4ed2-996a-3a5eae61b6d2.png)
-
+- Landing Page
+- Video Page
 
 [Live Link](https://vermilion4.github.io/youtube_clone)
 
-## Preview
+# Things Refactored
 
-![Screenshot (803)](https://user-images.githubusercontent.com/49479307/207883493-6a2d98c4-d19c-4012-9ef6-baeb0b4e08ce.png)
+- redundant links
+- css fallback colors for rgba values
+- large components into smaller bits
+- moved routes to App
+- moved common scripts to App and passed as props
 
 ## How to run locally
 
-- Clone the branch (pt-2) into your local machine
+- Clone the branch (refactoring) into your local machine
 - cd into the folder (i.e youtube_clone) -[cd youtube_clone]
 - Run 'npm install' in your terminal to install all dependencies
 - Run 'npm start' to start the server
