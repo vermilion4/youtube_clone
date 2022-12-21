@@ -1,19 +1,13 @@
 import React from 'react';
-import Home from '../../assets/home.svg';
-import Shorts from '../../assets/shorts.svg';
-import Subscription from '../../assets/subscription.svg';
 import Library from '../../assets/library.svg';
-import History from '../../assets/history.svg';
-import Videos from '../../assets/videos.svg';
-import WatchLater from '../../assets/watch-later.svg';
-import ShowMore from '../../assets/show-more.svg';
 import hamburger from '../../assets/hamburger-icon.svg';
 import youtube from '../../assets/youtube-icon.svg';
-
+import { topNavLinks } from '../../data/sidenavLinks';
+import { bottomNavLinks } from '../../data/sidenavLinks';
 import './Sidenav.css';
 import { NavLink } from 'react-router-dom';
 
-const Sidenav = ({ width, isCollapsed, handleToggler }) => {
+const Sidenav = ({ isCollapsed, handleToggler }) => {
   return (
     <div className={isCollapsed ? 'sidenav collapsed' : 'sidenav'}>
       <div className='sidenav-header'>
@@ -26,29 +20,19 @@ const Sidenav = ({ width, isCollapsed, handleToggler }) => {
       </div>
 
       <div className='sidenav-items'>
-        <NavLink to={'/youtube_clone'} className='item'>
-          <div className='sidenav-icon'>
-            <img src={Home} alt='Home icon' />
-          </div>
-          <p className={!isCollapsed ? 'hide' : 'show icon-text'}>Home</p>
-          <div className='sidenav-text'>Home</div>
-        </NavLink>
-        <div className='item'>
-          <div className='sidenav-icon'>
-            <img src={Shorts} alt='Shorts icon' />
-          </div>
-          <p className={!isCollapsed ? 'hide' : 'show icon-text'}>Shorts</p>
-          <div className='sidenav-text'>Shorts</div>
-        </div>
-        <div className='item'>
-          <div className='sidenav-icon'>
-            <img src={Subscription} alt='Subscription icon' />
-          </div>
-          <p className={!isCollapsed ? 'hide' : 'show icon-text'}>
-            Subscriptions
-          </p>
-          <div className='sidenav-text'>Subscriptions</div>
-        </div>
+        {topNavLinks.map((topNavLink) => {
+          const { id, link, image, text } = topNavLink;
+          return (
+            <NavLink key={id} to={link} className='item'>
+              <div className='sidenav-icon'>
+                <img src={image} alt='icon' />
+              </div>
+              <p className={!isCollapsed ? 'hide' : 'show icon-text'}>{text}</p>
+              <div className='sidenav-text'>{text}</div>
+            </NavLink>
+          );
+        })}
+
         {isCollapsed ? null : <hr />}
         <div className='item'>
           <div className='sidenav-icon'>
@@ -57,36 +41,22 @@ const Sidenav = ({ width, isCollapsed, handleToggler }) => {
           <p className={!isCollapsed ? 'hide' : 'show icon-text'}>Library</p>
           <div className='sidenav-text'>Library</div>
         </div>
-        {!isCollapsed ? (
-          <>
-            {' '}
-            <div className='item'>
-              <div className='sidenav-icon'>
-                <img src={History} alt='History icon' />
-              </div>
-              <div className='sidenav-text'>History</div>
-            </div>
-            <div className='item'>
-              <div className='sidenav-icon'>
-                <img src={Videos} alt='Videos icon' />
-              </div>
-              <div className='sidenav-text'>Your videos</div>
-            </div>
-            <div className='item'>
-              <div className='sidenav-icon'>
-                <img src={WatchLater} alt='Watch later icon' />
-              </div>
-              <div className='sidenav-text'>Watch later</div>
-            </div>
-            <div className='item'>
-              <div className='sidenav-icon'>
-                <img src={ShowMore} alt='Show more icon' />
-              </div>
-              <div className='sidenav-text'>Show More</div>
-            </div>
-            <hr />
-          </>
-        ) : null}
+        {!isCollapsed
+          ? bottomNavLinks.map((bottomNavLink) => {
+              const { id, link, image, text } = bottomNavLink;
+              return (
+                <NavLink to={link} key={id} className='item'>
+                  <div className='sidenav-icon'>
+                    <img src={image} alt='icon' />
+                  </div>
+                  <p className={!isCollapsed ? 'hide' : 'show icon-text'}>
+                    {text}
+                  </p>
+                  <div className='sidenav-text'>{text}</div>
+                </NavLink>
+              );
+            })
+          : null}
       </div>
     </div>
   );

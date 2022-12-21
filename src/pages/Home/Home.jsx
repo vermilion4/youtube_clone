@@ -1,44 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import { tags } from './data/tags';
-import Navbar from './components/Navbar/Navbar';
-import Sidenav from './components/Sidenav/Sidenav';
-import { movies } from './data/movies';
-import Options from './assets/options.svg';
+import { tags } from '../../data/tags';
+import Navbar from '../../components/Navbar/Navbar';
+import Sidenav from '../../components/Sidenav/Sidenav';
+import { movies } from '../../data/movies';
+import Options from '../../assets/options.svg';
 import { Link } from 'react-router-dom';
-import Next from './assets/next.svg';
+import Next from '../../assets/next.svg';
 
-const App = () => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // For sidebar
-  const handleToggler = () => {
-    setIsCollapsed(!isCollapsed);
-  };
-  // For profile menu
-  const handleMenuToggler = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  useEffect(() => {
-    setIsCollapsed(false);
-  }, []);
-  const getWidth = () => {
-    return window.innerWidth;
-  };
-  useEffect(() => {
-    function handleWindowResize() {
-      setWidth(getWidth());
-    }
-
-    window.addEventListener('resize', handleWindowResize);
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  }, []);
-
+const Home = ({
+  width,
+  isCollapsed,
+  isMenuOpen,
+  handleMenuToggler,
+  handleToggler,
+}) => {
   const maxCharHome = 40;
 
   return (
@@ -142,4 +117,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;

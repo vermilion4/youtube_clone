@@ -24,6 +24,11 @@ const Channel = ({
   playlists,
   about,
   community,
+  width,
+  isCollapsed,
+  isMenuOpen,
+  handleMenuToggler,
+  handleToggler,
 }) => {
   // Get username from url
   let { username } = useParams();
@@ -48,45 +53,13 @@ const Channel = ({
     description,
   } = currentUser;
 
-  const [isCollapsed, setIsCollapsed] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   let userSubscribe = subscribed;
   const [isSubscribed, setIsSubscribed] = useState(userSubscribe);
-  // For sidebar
-  const handleToggler = () => {
-    setIsCollapsed(!isCollapsed);
-  };
-  // For profile menu
-  const handleMenuToggler = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   const handleSubscribe = () => {
     userSubscribe = isSubscribed;
     setIsSubscribed(!userSubscribe);
   };
-  useEffect(() => {
-    setIsSubscribed(subscribed);
-  }, [subscribed]);
-
-  useEffect(() => {
-    setIsCollapsed(false);
-  }, []);
-  const getWidth = () => {
-    return window.innerWidth;
-  };
-  useEffect(() => {
-    function handleWindowResize() {
-      setWidth(getWidth());
-    }
-
-    window.addEventListener('resize', handleWindowResize);
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  }, []);
 
   return (
     <div>

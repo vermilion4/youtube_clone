@@ -9,9 +9,11 @@ import search from '../../assets/search-icon.svg';
 import youtube from '../../assets/youtube-icon.svg';
 import { Link } from 'react-router-dom';
 import ProfileMenu from '../ProfileMenu/ProfileMenu';
+import Tooltip from './Tooltip';
 
 const Navbar = ({ handleToggler, width, isMenuOpen, handleMenuToggler }) => {
   const username = '@aaron123';
+  const navbarTooltip = [{ id: 1, classname: '' }];
   return (
     <nav>
       <div className='left-nav'>
@@ -39,27 +41,23 @@ const Navbar = ({ handleToggler, width, isMenuOpen, handleMenuToggler }) => {
       <div className='right-nav'>
         {width <= 600 ? (
           <>
-            {' '}
-            <div className=' tooltip search-mobile'>
-              <img src={search} />
-              <div className='tooltiptext'>Search</div>
-            </div>
-            <div className='tooltip mic-mobile'>
-              <img src={mic} />
-              <div className='tooltiptext'>Search with your voice</div>
-            </div>
+            <Tooltip classname={'search-mobile'} icon={search} text='Search' />
+            <Tooltip
+              classname={'mic-mobile'}
+              icon={mic}
+              text='Search with your voice'
+            />
           </>
         ) : null}
 
-        <div className='tooltip create'>
-          <img src={create} />
-          <div className='tooltiptext'>Create</div>
-        </div>
-        <div className='tooltip notification'>
-          <img src={notification} />
-          <div className='missed'>9+</div>
-          <div className='tooltiptext'>Notifications</div>
-        </div>
+        <Tooltip classname={'create'} icon={create} text='Create' />
+        <Tooltip
+          classname={'notification'}
+          icon={notification}
+          text='Notifications'
+          notify
+        />
+
         <div onClick={handleMenuToggler} className='profile'>
           <img src={profile} />
         </div>
