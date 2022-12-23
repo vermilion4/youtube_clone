@@ -1,13 +1,20 @@
 {
   "files": {
-    "main.css": "/youtube_clone/static/css/main.a201aade.css",
-    "main.js": "/youtube_clone/static/js/main.398a82df.js",
+    "main.css": "/youtube_clone/static/css/main.f16b850b.css",
+    "main.js": "/youtube_clone/static/js/main.66f6f058.js",
     "static/media/movie2.jpeg": "/youtube_clone/static/media/movie2.5cdf625e550bb4dd4f5e.jpeg",
+    "static/media/YouTubeSansMedium.otf": "/youtube_clone/static/media/YouTubeSansMedium.832f8a04b0653058589f.otf",
     "static/media/movie3.webp": "/youtube_clone/static/media/movie3.513912ca3f3549ee869d.webp",
     "static/media/banner.jpeg": "/youtube_clone/static/media/banner.b9fc0f931df394218d87.jpeg",
     "static/media/movie4.webp": "/youtube_clone/static/media/movie4.4bd641749d07d2852af3.webp",
     "static/media/movie1.webp": "/youtube_clone/static/media/movie1.71625cbf982b03c5a962.webp",
     "static/media/youtube-icon.svg": "/youtube_clone/static/media/youtube-icon.0a4516e5e650193e2a08b1446166c2fa.svg",
+    "static/media/sharing.svg": "/youtube_clone/static/media/sharing.3169ef45d6a31db25d5d4a7fbe298080.svg",
+    "static/media/playback.svg": "/youtube_clone/static/media/playback.2993e904d088dfa7786e5872499c7171.svg",
+    "static/media/advanced.svg": "/youtube_clone/static/media/advanced.f41eceaaa0bb27677fb029eb3e89af88.svg",
+    "static/media/look.svg": "/youtube_clone/static/media/look.75d0fab05f94357b613375275cb1a354.svg",
+    "static/media/notification.svg": "/youtube_clone/static/media/notification.2fd11b9abbfffe5147cc0eecb94ff495.svg",
+    "static/media/privacy.svg": "/youtube_clone/static/media/privacy.18828e34715ad007c774528628c90ef7.svg",
     "static/media/settings.svg": "/youtube_clone/static/media/settings.68f3b2d558810336a6919e9195ec94da.svg",
     "static/media/restriction.svg": "/youtube_clone/static/media/restriction.76153d913b05655c26ab41b2386b04ef.svg",
     "static/media/location.svg": "/youtube_clone/static/media/location.f6ae775efa3e025a2b79e84f6f02d293.svg",
@@ -48,11 +55,11 @@
     "static/media/play.svg": "/youtube_clone/static/media/play.73e164535c755eb684d7bc2f193a54f2.svg",
     "static/media/options.svg": "/youtube_clone/static/media/options.70375a0e0f24134fd6635502291be6ad.svg",
     "static/media/next.svg": "/youtube_clone/static/media/next.70a54e99ad80aadbcaf07f144c046f11.svg",
-    "main.a201aade.css.map": "/youtube_clone/static/css/main.a201aade.css.map",
-    "main.398a82df.js.map": "/youtube_clone/static/js/main.398a82df.js.map"
+    "main.f16b850b.css.map": "/youtube_clone/static/css/main.f16b850b.css.map",
+    "main.66f6f058.js.map": "/youtube_clone/static/js/main.66f6f058.js.map"
   },
   "entrypoints": [
-    "static/css/main.a201aade.css",
-    "static/js/main.398a82df.js"
+    "static/css/main.f16b850b.css",
+    "static/js/main.66f6f058.js"
   ]
 }
