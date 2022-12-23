@@ -11,9 +11,15 @@ import { Link } from 'react-router-dom';
 import ProfileMenu from '../ProfileMenu/ProfileMenu';
 import Tooltip from './Tooltip';
 
-const Navbar = ({ handleToggler, width, isMenuOpen, handleMenuToggler }) => {
+const Navbar = ({
+  handleToggler,
+  width,
+  isMenuOpen,
+  handleMenuToggler,
+  setIsMenuOpen,
+}) => {
   const username = '@aaron123';
-  const navbarTooltip = [{ id: 1, classname: '' }];
+
   return (
     <nav>
       <div className='left-nav'>

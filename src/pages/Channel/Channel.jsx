@@ -29,6 +29,8 @@ const Channel = ({
   isMenuOpen,
   handleMenuToggler,
   handleToggler,
+  setIsMenuOpen,
+  setIsCollapsed,
 }) => {
   // Get username from url
   let { username } = useParams();
@@ -64,13 +66,16 @@ const Channel = ({
   return (
     <div>
       {/* Overlay for sidebar at medium to small screen */}
-      {width <= 792 && !isCollapsed ? <div className='overlay'></div> : null}
+      {width <= 792 && !isCollapsed ? (
+        <div onClick={() => setIsCollapsed(true)} className='overlay'></div>
+      ) : null}
       {/* Navbar */}
       <Navbar
         isMenuOpen={isMenuOpen}
         handleMenuToggler={handleMenuToggler}
         width={width}
         handleToggler={handleToggler}
+        setIsMenuOpen={setIsMenuOpen}
       />
       <main className='channel-main'>
         <Sidenav
