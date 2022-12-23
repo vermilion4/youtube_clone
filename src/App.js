@@ -4,6 +4,7 @@ import Video from './pages/Video/Video';
 import Channel from './pages/Channel/Channel';
 import Home from './pages/Home/Home';
 import './App.css';
+import Settings from './pages/Settings/Settings';
 
 function App ()
 {
@@ -63,6 +64,8 @@ function App ()
               isMenuOpen={ isMenuOpen }
               handleMenuToggler={ handleMenuToggler }
               handleToggler={ handleToggler }
+              setIsMenuOpen={ setIsMenuOpen }
+              setIsCollapsed={ setIsCollapsed }
             />
           }></Route>
         <Route
@@ -72,7 +75,9 @@ function App ()
               isCollapsed={ isCollapsed }
               isMenuOpen={ isMenuOpen }
               handleMenuToggler={ handleMenuToggler }
-              handleToggler={ handleToggler } /> }></Route>
+              handleToggler={ handleToggler }
+              setIsMenuOpen={ setIsMenuOpen }
+              setIsCollapsed={ setIsCollapsed } /> }></Route>
         <Route
           path='/:username/featured'
           element={
@@ -80,7 +85,9 @@ function App ()
               isCollapsed={ isCollapsed }
               isMenuOpen={ isMenuOpen }
               handleMenuToggler={ handleMenuToggler }
-              handleToggler={ handleToggler } home /> }></Route>
+              handleToggler={ handleToggler }
+              setIsMenuOpen={ setIsMenuOpen }
+              setIsCollapsed={ setIsCollapsed } home /> }></Route>
         <Route
           path='/:username/videos'
           element={
@@ -88,7 +95,9 @@ function App ()
               isCollapsed={ isCollapsed }
               isMenuOpen={ isMenuOpen }
               handleMenuToggler={ handleMenuToggler }
-              handleToggler={ handleToggler } videos /> }></Route>
+              handleToggler={ handleToggler }
+              setIsMenuOpen={ setIsMenuOpen }
+              setIsCollapsed={ setIsCollapsed } videos /> }></Route>
         <Route
           path='/:username/shorts'
           element={
@@ -96,7 +105,9 @@ function App ()
               isCollapsed={ isCollapsed }
               isMenuOpen={ isMenuOpen }
               handleMenuToggler={ handleMenuToggler }
-              handleToggler={ handleToggler } shorts /> }></Route>
+              handleToggler={ handleToggler }
+              setIsMenuOpen={ setIsMenuOpen }
+              setIsCollapsed={ setIsCollapsed } shorts /> }></Route>
         <Route
           path='/:username/playlists'
           element={
@@ -104,7 +115,9 @@ function App ()
               isCollapsed={ isCollapsed }
               isMenuOpen={ isMenuOpen }
               handleMenuToggler={ handleMenuToggler }
-              handleToggler={ handleToggler } playlists /> }></Route>
+              handleToggler={ handleToggler }
+              setIsMenuOpen={ setIsMenuOpen }
+              setIsCollapsed={ setIsCollapsed } playlists /> }></Route>
         <Route
           path='/:username/community'
           element={
@@ -112,7 +125,9 @@ function App ()
               isCollapsed={ isCollapsed }
               isMenuOpen={ isMenuOpen }
               handleMenuToggler={ handleMenuToggler }
-              handleToggler={ handleToggler } community /> }></Route>
+              handleToggler={ handleToggler }
+              setIsMenuOpen={ setIsMenuOpen }
+              setIsCollapsed={ setIsCollapsed } community /> }></Route>
         <Route
           path='/:username/channels'
           element={
@@ -120,7 +135,9 @@ function App ()
               isCollapsed={ isCollapsed }
               isMenuOpen={ isMenuOpen }
               handleMenuToggler={ handleMenuToggler }
-              handleToggler={ handleToggler } channels /> }></Route>
+              handleToggler={ handleToggler }
+              setIsMenuOpen={ setIsMenuOpen }
+              setIsCollapsed={ setIsCollapsed } channels /> }></Route>
         <Route
           path='/:username/about'
           element={
@@ -128,7 +145,58 @@ function App ()
               isCollapsed={ isCollapsed }
               isMenuOpen={ isMenuOpen }
               handleMenuToggler={ handleMenuToggler }
-              handleToggler={ handleToggler } about /> }></Route>
+              handleToggler={ handleToggler }
+              setIsMenuOpen={ setIsMenuOpen }
+              setIsCollapsed={ setIsCollapsed } about /> }></Route>
+        <Route path='/account' element={ <Settings width={ width }
+          isCollapsed={ isCollapsed }
+          isMenuOpen={ isMenuOpen }
+          handleMenuToggler={ handleMenuToggler }
+          handleToggler={ handleToggler }
+          setIsMenuOpen={ setIsMenuOpen }
+          setIsCollapsed={ setIsCollapsed } account /> }></Route>
+        <Route path='/account_notifications' element={ <Settings width={ width }
+          isCollapsed={ isCollapsed }
+          isMenuOpen={ isMenuOpen }
+          handleMenuToggler={ handleMenuToggler }
+          handleToggler={ handleToggler }
+          setIsMenuOpen={ setIsMenuOpen }
+          setIsCollapsed={ setIsCollapsed } notifications /> }></Route>
+        <Route path='/account_playback' element={ <Settings width={ width }
+          isCollapsed={ isCollapsed }
+          isMenuOpen={ isMenuOpen }
+          handleMenuToggler={ handleMenuToggler }
+          handleToggler={ handleToggler }
+          setIsMenuOpen={ setIsMenuOpen }
+          setIsCollapsed={ setIsCollapsed } playback /> }></Route>
+        <Route path='/account_privacy' element={ <Settings width={ width }
+          isCollapsed={ isCollapsed }
+          isMenuOpen={ isMenuOpen }
+          handleMenuToggler={ handleMenuToggler }
+          handleToggler={ handleToggler }
+          setIsMenuOpen={ setIsMenuOpen }
+          setIsCollapsed={ setIsCollapsed } privacy /> }></Route>
+        <Route path='/account_sharing' element={ <Settings width={ width }
+          isCollapsed={ isCollapsed }
+          isMenuOpen={ isMenuOpen }
+          handleMenuToggler={ handleMenuToggler }
+          handleToggler={ handleToggler }
+          setIsMenuOpen={ setIsMenuOpen }
+          setIsCollapsed={ setIsCollapsed } sharing /> }></Route>
+        <Route path='/account_billing' element={ <Settings width={ width }
+          isCollapsed={ isCollapsed }
+          isMenuOpen={ isMenuOpen }
+          handleMenuToggler={ handleMenuToggler }
+          handleToggler={ handleToggler }
+          setIsMenuOpen={ setIsMenuOpen }
+          setIsCollapsed={ setIsCollapsed } billing /> }></Route>
+        <Route path='/account_advanced' element={ <Settings width={ width }
+          isCollapsed={ isCollapsed }
+          isMenuOpen={ isMenuOpen }
+          handleMenuToggler={ handleMenuToggler }
+          handleToggler={ handleToggler }
+          setIsMenuOpen={ setIsMenuOpen }
+          setIsCollapsed={ setIsCollapsed } advanced /> }></Route>
       </Routes>
     </Router>
   );

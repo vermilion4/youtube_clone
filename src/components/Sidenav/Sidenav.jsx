@@ -34,13 +34,13 @@ const Sidenav = ({ isCollapsed, handleToggler }) => {
         })}
 
         {isCollapsed ? null : <hr />}
-        <div className='item'>
+        <NavLink to={'/'} key='32' className='item'>
           <div className='sidenav-icon'>
             <img src={Library} alt='Library icon' />
           </div>
           <p className={!isCollapsed ? 'hide' : 'show icon-text'}>Library</p>
           <div className='sidenav-text'>Library</div>
-        </div>
+        </NavLink>
         {!isCollapsed
           ? bottomNavLinks.map((bottomNavLink) => {
               const { id, link, image, text } = bottomNavLink;

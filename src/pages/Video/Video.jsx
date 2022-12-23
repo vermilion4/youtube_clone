@@ -20,6 +20,8 @@ const Video = ({
   isMenuOpen,
   handleMenuToggler,
   handleToggler,
+  setIsMenuOpen,
+  setIsCollapsed,
 }) => {
   // Get video id from url
   let { id } = useParams();
@@ -77,13 +79,20 @@ const Video = ({
   return (
     <div>
       {/* Overlay for sidebar at medium to small screen */}
-      {!isCollapsed ? <div className='overlay'></div> : null}
+      {!isCollapsed ? (
+        <div
+          onClick={() => {
+            setIsCollapsed(true);
+          }}
+          className='overlay'></div>
+      ) : null}
       {/* Navbar */}
       <Navbar
         isMenuOpen={isMenuOpen}
         handleMenuToggler={handleMenuToggler}
         width={width}
         handleToggler={handleToggler}
+        setIsMenuOpen={setIsMenuOpen}
       />
       <main>
         <VideoSidenav handleToggler={handleToggler} isCollapsed={isCollapsed} />

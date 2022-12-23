@@ -14,6 +14,7 @@ import Settings from '../../assets/settings.svg';
 import Help from '../../assets/help.svg';
 import Next from '../../assets/next.svg';
 import Feedback from '../../assets/feedback.svg';
+import { NavLink } from 'react-router-dom';
 
 const Profile = () => {
   const profileMenuArr = [
@@ -23,6 +24,7 @@ const Profile = () => {
       text: 'Your channel',
       next: false,
       line: false,
+      link: '/',
     },
     {
       id: 2,
@@ -30,6 +32,7 @@ const Profile = () => {
       text: 'Youtube Studio',
       next: false,
       line: false,
+      link: '/',
     },
     {
       id: 3,
@@ -37,6 +40,7 @@ const Profile = () => {
       text: 'Switch account',
       next: true,
       line: false,
+      link: '/',
     },
     {
       id: 4,
@@ -44,6 +48,7 @@ const Profile = () => {
       text: 'Sign out',
       next: false,
       line: true,
+      link: '/',
     },
     {
       id: 5,
@@ -51,6 +56,7 @@ const Profile = () => {
       text: 'Purchases and memberships',
       next: false,
       line: false,
+      link: '/',
     },
     {
       id: 6,
@@ -58,6 +64,7 @@ const Profile = () => {
       text: 'Your data in Youtube',
       next: false,
       line: true,
+      link: '/',
     },
     {
       id: 7,
@@ -65,6 +72,7 @@ const Profile = () => {
       text: 'Appearance: Device theme',
       next: true,
       line: false,
+      link: '/',
     },
     {
       id: 8,
@@ -72,6 +80,7 @@ const Profile = () => {
       text: 'Language: English',
       next: true,
       line: false,
+      link: '/',
     },
     {
       id: 9,
@@ -79,6 +88,7 @@ const Profile = () => {
       text: 'Restricted Mode: Off',
       next: true,
       line: false,
+      link: '/',
     },
     {
       id: 10,
@@ -86,6 +96,7 @@ const Profile = () => {
       text: 'Location: Nigeria',
       next: true,
       line: false,
+      link: '/',
     },
     {
       id: 11,
@@ -93,6 +104,7 @@ const Profile = () => {
       text: 'Keyboard shortcuts',
       next: false,
       line: true,
+      link: '/',
     },
     {
       id: 12,
@@ -100,6 +112,7 @@ const Profile = () => {
       text: 'Settings',
       next: false,
       line: true,
+      link: '/account',
     },
     {
       id: 13,
@@ -107,6 +120,7 @@ const Profile = () => {
       text: 'Help',
       next: false,
       line: false,
+      link: '/',
     },
     {
       id: 11,
@@ -114,13 +128,14 @@ const Profile = () => {
       text: 'Send feedback',
       next: false,
       line: false,
+      link: '/',
     },
   ];
   return profileMenuArr.map((profileMenu) => {
-    const { id, image, text, next, line } = profileMenu;
+    const { id, image, text, next, line, link } = profileMenu;
     return (
       <>
-        <div key={id} className='item'>
+        <NavLink to={link} key={id} className='item'>
           <div className='sidenav-icon'>
             <img src={image} alt='icon' />
           </div>
@@ -134,7 +149,7 @@ const Profile = () => {
               </div>
             ) : null}
           </div>
-        </div>
+        </NavLink>
         {line ? <hr /> : null}
       </>
     );

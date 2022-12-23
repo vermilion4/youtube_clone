@@ -1,0 +1,169 @@
+@font-face {
+  font-family: youtubeSansMedium;
+  src: url(../../fonts/youtube-sans-cufonfonts/YouTubeSansMedium.otf);
+}
+.settings-container {
+  padding-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 300px auto;
+}
+.settings-container h4 {
+  color: #f1f1f1;
+  font-weight: 600;
+}
+.settings-container hr {
+  border-bottom: none;
+  margin-right: 1rem;
+  border-color: rgb(67, 66, 66);
+  border-color: rgba(255, 255, 255, 0.138);
+}
+.blue-txt {
+  color: #3ea6ff;
+}
+.grey-txt {
+  color: #aaaaaa;
+}
+.settings-container__nav {
+  position: fixed;
+  top: 75px;
+  width: 300px;
+  left: 0;
+}
+.settings-container__nav h2 {
+  margin-left: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-size: 19px;
+  font-family: youtubeSansMedium, 'Roboto';
+  letter-spacing: 0.05rem;
+}
+.setting-item.item {
+  width: 78%;
+  font-size: 15px;
+}
+.settings-container__main {
+  padding-top: 30px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 1000px) {
+  .settings-container__nav {
+    width: 300px;
+  }
+  .setting-item.item {
+    width: 78%;
+    font-size: 15px;
+  }
+}
+@media (max-width: 769px) {
+  .settings-container__nav {
+    display: none;
+  }
+  .settings-container {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: auto;
+  }
+  .settings-container__main {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Account */
+.account-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.account-header h2 {
+  color: #f1f1f1;
+  font-weight: 500;
+}
+.account-header p,
+.account-channel p,
+.account-account p {
+  margin-top: 1rem;
+  font-size: 14px;
+}
+.account-image img {
+  height: 170px;
+}
+
+/* Channel */
+.account-channel,
+.account-account {
+  margin-top: 1.5rem;
+}
+.account-channel {
+  padding-bottom: 1.5rem;
+}
+.account-channel p,
+.account-account p {
+  margin-top: 0.5rem;
+}
+
+.account-body {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 250px auto;
+  width: 100%;
+}
+.channel-body__user--head {
+  display: flex;
+  align-items: center;
+  column-gap: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+.channel-body__user--head .profile {
+  height: 50px;
+}
+.channel-body__user--head .profile img {
+  width: 50px;
+  height: 50px;
+}
+.channel-body__user .manage-account,
+.no-membership {
+  padding-left: 0.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 14px;
+}
+.premium {
+  display: flex;
+}
+
+@media (max-width: 1000px) {
+  .premium {
+    flex-direction: column;
+  }
+}
+
+/* Billing */
+.billing-title {
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
+.billing-body {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.billing-body__text {
+  font-size: 15px;
+}
+.billing-body__btn {
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid rgb(67, 66, 66);
+}
+.billing-body__btn:hover {
+  background-color: #3ea5ff6e;
+  cursor: pointer;
+}
+.quick-purchase {
+  margin-bottom: 0.5rem;
+}
