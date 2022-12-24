@@ -138,6 +138,11 @@
     flex-direction: column;
   }
 }
+@media (max-width: 600px) {
+  .account-body {
+    grid-template-columns: 190px auto;
+  }
+}
 
 /* Billing */
 .billing-title {
