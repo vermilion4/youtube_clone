@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/youtube_clone/static/css/main.f16b850b.css",
+    "main.css": "/youtube_clone/static/css/main.7ed706fa.css",
     "main.js": "/youtube_clone/static/js/main.66f6f058.js",
     "static/media/movie2.jpeg": "/youtube_clone/static/media/movie2.5cdf625e550bb4dd4f5e.jpeg",
     "static/media/YouTubeSansMedium.otf": "/youtube_clone/static/media/YouTubeSansMedium.832f8a04b0653058589f.otf",
@@ -55,11 +55,11 @@
     "static/media/play.svg": "/youtube_clone/static/media/play.73e164535c755eb684d7bc2f193a54f2.svg",
     "static/media/options.svg": "/youtube_clone/static/media/options.70375a0e0f24134fd6635502291be6ad.svg",
     "static/media/next.svg": "/youtube_clone/static/media/next.70a54e99ad80aadbcaf07f144c046f11.svg",
-    "main.f16b850b.css.map": "/youtube_clone/static/css/main.f16b850b.css.map",
+    "main.7ed706fa.css.map": "/youtube_clone/static/css/main.7ed706fa.css.map",
     "main.66f6f058.js.map": "/youtube_clone/static/js/main.66f6f058.js.map"
   },
   "entrypoints": [
-    "static/css/main.f16b850b.css",
+    "static/css/main.7ed706fa.css",
     "static/js/main.66f6f058.js"
   ]
 }
