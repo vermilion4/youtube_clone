@@ -42,6 +42,7 @@ function App ()
     function handleWindowResize ()
     {
       setWidth(getWidth());
+      setIsCollapsed(true);
     }
 
     window.addEventListener('resize', handleWindowResize);
